@@ -1,0 +1,54 @@
+.header{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent url('../img/header_bg2.png') repeat-x;
+  color: $white;
+  font-size: 14px;
+
+
+  .header__wrapper{
+    @include make-row();
+    @include center-block;
+    width: 62.43em;
+  }
+
+  .header__logo-wrapper{
+    @include make-xs-column(4);
+    padding-left: 0;
+
+    .header__logo{
+      width: 6.5em;
+      height: 2.77em;
+      background-color: red;
+      font-size: 2.14em;
+      line-height: 2.64em;
+      text-align: center;
+      font-family: LaurenScript, serif;
+    }
+  }
+
+  .header__menu{
+    @include make-xs-column(8);
+    @include make-row();
+    list-style: none;
+    margin-left: -2.8em;
+
+    .menu__item{
+      @include make-xs-column(2);
+      padding: 0;
+
+      .menu__link{
+        color: $white;
+        line-height: 3.7em;
+        font-size: 1.3em;
+      }
+
+      .menu__link:hover{
+        text-decoration: none;
+        border-bottom: 3px solid $white;
+      }
+    }
+  }
+}

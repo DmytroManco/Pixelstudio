@@ -1,0 +1,21 @@
+.portfolio{
+  margin-top: 40px;
+  .portfolio__items{
+    @include make-row();
+    margin: 20px 0;
+
+    .portfolio__item{
+      @include make-xs-column(4);
+      width: 280px;
+      padding-left: 0;
+      height: 150px;
+      margin: 20px 17px 20px 0;
+    }
+
+    .portfolio__item:nth-child(3),
+    .portfolio__item:nth-child(6),
+    .portfolio__item:nth-child(9){
+      margin-right: 0;
+    }
+  }
+}

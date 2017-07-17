@@ -1,0 +1,18 @@
+@mixin makeLine($height) {
+  height: $height;
+  background-color: $black;
+  margin-top: 4px;
+}
+
+@mixin capitalLetter{
+  font-size: 3.214em;
+  line-height: 1em;
+  float: left;
+  padding-right: 10px;
+}
+
+$highlighter: $tallPoppy;
+$sliderItemsBg: $tundora;
+$aboutRedBorder: $spicyMix;
+$grayColor: $gray;
+$khakiColor: $indianKhaki;

@@ -1,0 +1,64 @@
+.works{
+  margin-top: 50px;
+
+  .accordion{
+    margin-top: 20px;
+
+    .accordion__label{
+      color: $black;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+
+    .accordion__label--active{
+      color: $white;
+      background-color: $black;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: inset 0 0 10px $grayColor;
+    }
+
+    /*Tail tooltip*/
+    .accordion__label--active::before{
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      border-width: 8px 8px 0;
+      border-style: solid;
+      border-color: $black transparent;
+      left: 1.8em;
+    }
+
+
+    .accordion__tab{
+      .tab__input{
+        display: none;
+      }
+
+      .tab__content{
+        display: none;
+      }
+
+      .tab__input:checked ~ .tab__content{
+        display: block;
+        @include make-row();
+        margin: 10px 0;
+      }
+
+      .tab__content .content__item{
+        @include make-xs-column(3);
+        width: 24%;
+        padding-left: 0;
+        margin: 20px 1% 20px 0;
+      }
+
+      .tab__content .content__item:nth-child(4),
+      .tab__content .content__item:nth-child(8),
+      .tab__content .content__item:nth-child(12){
+        margin-right:0;
+      }
+    }
+  }
+}

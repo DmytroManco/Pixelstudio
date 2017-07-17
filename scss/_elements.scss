@@ -1,0 +1,82 @@
+.elements{
+
+  .elements__text{
+    margin: 20px 0;
+  }
+
+  .elements__text:first-child::first-letter{
+    @include capitalLetter;
+  }
+
+  .elements__bulleted-list,
+  .elements__ordered-list{
+    color: rgb(118, 118, 118);
+  }
+
+  .elements__bulleted-list li::before{
+    border-color: transparent rgb(118, 118, 118);
+  }
+
+  .elements__ordered-list{
+    padding: 0;
+    list-style-position: inside;
+  }
+
+  h5{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .elements__placeholder{
+    height: 150px;
+    margin: 20px 0;
+    width: 250px;
+    padding-left: 0;
+    background-color: #ccc;
+    border: 4px solid white;
+    outline: 1px solid #ccc;
+  }
+
+  .testimonials__text{
+    font-style: italic;
+    color: rgb(118, 118, 118);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .testimonials__quote{
+    font-size:2.57em;
+    position: absolute;
+  }
+
+  .lquote{
+    left: -10px;
+    top: -10px;
+  }
+
+  .ruote{
+    font-size:2.57em;
+    right: 0;
+  }
+
+  .testimonials__author{
+    font-style: normal;
+  }
+
+  .elements__textbox{
+    background-color: $white;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    h3{
+      background-color: #ccc;
+      margin: 0;
+      padding: 15px;
+    }
+
+    p{
+      padding: 10px;
+    }
+  }
+}

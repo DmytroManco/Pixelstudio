@@ -1,0 +1,80 @@
+.about{
+  margin-top: 90px;
+
+  .wrapper-row{
+    @include make-row();
+  }
+
+  .about__subheading{
+    font-size: 1.9em;
+    font-weight: bold;
+  }
+
+
+  .about__left-column{
+    @include make-xs-column(8);
+
+    .about__text{
+      margin: 20px 0;
+    }
+
+    .about__text:first-child::first-letter{
+      @include capitalLetter;
+    }
+
+    .about__h3{
+      font-size: 1.5em;
+      font-family: Calluna, sans-serif;
+      color: rgb(14, 14, 14);
+      font-weight: bold;
+    }
+
+    .about__color{
+      border-left: 3px solid $black;
+      padding: 10px 0 10px 20px;
+      margin: 15px 0;
+      background-color: $white;
+      outline: 1px solid #ccc;
+    }
+
+    .about__color--red{
+      border-left: 3px solid $spicyMix;
+    }
+
+    .about__color--gray{
+      border-left: 3px solid $grayColor;
+    }
+
+    .about__color--wtf{
+      border-left: 3px solid $khakiColor;
+    }
+  }
+
+  .about__right-column{
+    @include make-xs-column(4);
+
+    .about__thumbnails-container{
+      @include make-row();
+
+      .about__thumbnail{
+        @include make-xs-column(4);
+        width: 30%;
+        margin:10px 3% 10px 0;
+
+        img{
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+
+    .about__bulleted-list li::before{
+      border-color: transparent $tallPoppy;
+    }
+
+    .about__bulleted-list li{
+      margin-top: 10px;
+    }
+
+  }
+}

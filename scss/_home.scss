@@ -1,0 +1,144 @@
+.home{
+  margin-top: 10em;
+  .home__heading{
+    font-size: 3.215em;
+  }
+
+  .home__content{
+    @include make-row();
+
+    .home__main-text{
+      @include make-xs-column(6);
+
+      .main-text__heading{
+        font-family: Calluna, serif;
+        font-size: 2em;
+      }
+
+      p{
+        margin: 23px 0 30px;
+      }
+    }
+
+
+    .home__slider{
+      @include make-xs-column(6);
+      padding: 0;
+      color: $white;
+      margin-top: 20px;
+
+      .slider__input{
+        display: none;
+      }
+
+      .slides__slide{
+        border: 3px solid $white;
+        outline: 1px solid #ccc;
+        position: relative;
+        height: 240px;
+        width: 387px;
+
+        .slide__img{
+          padding: 0;
+          width: 100%;
+          margin: 0;
+          position: absolute;
+        }
+
+        .btn--prev, .btn--next{
+          position: absolute;
+          background-color: $sliderItemsBg;
+          width: 50px;
+          top: 100px;
+          border-radius: 0;
+        }
+
+        .btn--prev{
+          left: 0;
+        }
+
+        .btn--next{
+          right: 0;
+        }
+        
+        .slider__desc{
+          position: absolute;
+          width: 100%;
+          padding: 10px;
+          bottom: 0;
+          background-color: $sliderItemsBg;
+        }
+      }
+
+      .slider__controls{
+        position: absolute;
+        width: 100px;
+        left: 50%;
+        bottom: -35px;
+        margin-left: -4.32em;
+
+        .controls__item{
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+          background-color: #ccc;
+          cursor: pointer;
+        }
+
+        .controls__item--active{
+          background-color: $grayColor;
+        }
+      }
+
+      .slides__slide{
+        display: none;
+      }
+
+      #slide-1:checked ~ .slider__slides > .slide-1,
+      #slide-2:checked ~ .slider__slides > .slide-2,
+      #slide-3:checked ~ .slider__slides > .slide-3,
+      #slide-4:checked ~ .slider__slides > .slide-4{
+        display: block;
+      }
+    }
+  }
+
+  .home__columns{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    @include make-row();
+
+    .columns__separator{
+      height: 2px;
+      background: url('../img/separator.png') repeat-x;
+      margin-bottom: 20px;
+    }
+
+    .home__column{
+      @include make-xs-column(4);
+
+      .column__heading{
+        font-family: Calluna, serif;
+        font-size: 1.5em;
+
+        .heading__icon{
+          width: 19px;
+          height: 21px;
+          display: inline-block;
+          margin-right: 20px;
+          background-image: url('../img/home_columns-sprite.png');
+          background-repeat: no-repeat;
+          background-position: 0 -22px;
+        }
+
+        .heading__icon--pen{
+          background-position: 0 0;
+        }
+
+        .heading__icon--person{
+          background-position: -20px 0;
+        }
+      }
+    }
+  }
+}
